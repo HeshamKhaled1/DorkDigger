@@ -24,16 +24,18 @@ Requirements: Python 3.8+ and the dependencies in requirements.txt.
 
 ## Run
 
-Once installed, use the console command:
+Once installed, use the console command
 
-Get familiar with DorkDigger:
+### Get familiar with DorkDigger:
 ```bash
 python3 DorkDigger.py --help
 ```
 
-Example quick run with DuckDuckGo and built‑in dorks:
+### Example quick run with DuckDuckGo and built‑in dorks:
 
+```bash
 python3 DorkDigger.py --max-results 10 --sleep 1 --out-prefix myalerts
+```
 
 Outputs:
 
@@ -74,17 +76,20 @@ Notes:
 
 ## Useful options
 
-- --site: Restrict to a site domain, e.g. --site example.com
-- --inurl: Comma-separated URL substrings to require, e.g. --inurl ".eg,.sa"
-- --intext: Add intext:… to every query, e.g. --intext "\"password\""
-- --filetype: Filetype filter, e.g. --filetype sql or --filetype "filetype:sql"
-- --intitle: Add intitle:… to every query, e.g. --intitle "\"index of\""
-- --max-results: Maximum results per dork (default 25)
-- --sleep: Throttle between queries (seconds)
-- --out-prefix: Output prefix for TXT/JSON/CSV (default alerts)
-- --engine: duckduckgo (default) or serpapi
-- --serpapi-engine: google (default) or bing (SerpAPI engine selector)
-- --dorks-file: File with one dork per line (falls back to dorks.txt if present)
+Short Form    | Long Form         | Description
+------------- | -------------     |-------------
+-F            | --dorks-file      | File with one dork per line (falls back to dorks.txt if present)
+-s            | --site            | Restrict to a site domain, e.g. --site example.com
+-u            | --inurl           | Comma-separated URL substrings to require, e.g. --inurl "/admin,ssh"
+-i            | --intext          | Add intext:… to every query, e.g. --intext "\"password\""
+-I            | --intitle         | Add intitle:… to every query, e.g. --intitle "\"index of\""
+-f            | --filetype        | Filetype filter, e.g. --filetype sql or --filetype "filetype:sql"
+-S            | --sleep           | Throttle between queries (seconds)
+-o            | --out-prefix      | Output prefix for TXT/JSON/CSV (default alerts)
+-e            | --engine          | duckduckgo (default) or serpapi
+-k            | --serpapi-key     | google (default) or bing (SerpAPI engine selector)
+-E            | --serpapi-engine  | File with one dork per line (falls back to dorks.txt if present)
+
 
 Examples:
 
@@ -97,7 +102,7 @@ DorkDigger --dorks-file mydorks.txt --max-results 50 --sleep 1.2 --out-prefix dd
 - SerpAPI Google engine with scoping and filters:
 
 ```bash
-DorkDigger --engine serpapi --site example.com --inurl ".bak" --filetype "sql" --max-results 20 --sleep 1 --out-prefix ex_alerts
+DorkDigger --engine serpapi --site example.com --inurl ".bak" --filetype "sql" --max-results 10 --sleep 1 --out-prefix ex_alerts
 ```
 
 ## Files and configuration

@@ -645,7 +645,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Dork monitoring tool (duckduckgo or serpapi).")
     parser.add_argument("--dorks-file", "-f", help="Path to a file with dorks (one per line).")
     parser.add_argument("--site", "-s", help="Optional site to prepend as site:example.com")
-    parser.add_argument("--inurl", "-u", help='Optional inurl terms (comma-separated). Example: ".eg,.sa"')
+    parser.add_argument("--inurl", "-u", help='Optional inurl terms (comma-separated). Example: "/admin,ssh"')
     parser.add_argument("--intext", help='Optional intext term to include in queries. Example: "\"password\""')
     parser.add_argument("--filetype", help='Optional filetype to include in queries. Example: "sql" or "filetype:sql"')
     parser.add_argument("--intitle", help='Optional intitle term to include in queries. Example: "\"index of\""')
@@ -658,10 +658,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     default_dorks = [
-        'intitle:index of /etc/ssh inurl:".sa"',
-        'intitle:index of /etc/ssh inurl:".eg"',
+        'intitle:index of /etc/ssh inurl:"/admin"',
+        'intitle:index of /etc/ssh inurl:"ssh"',
         'intitle:index of /etc',
-        'intitle:index of /etc inurl:".eg"',
+        'intitle:index of /etc inurl:".gov"',
         'intitle:"index of" ".sql"',
         'intitle:"index of" "database.sql"',
         'inurl:backup filetype:sql',
