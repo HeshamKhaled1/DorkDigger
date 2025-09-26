@@ -6,19 +6,19 @@ DorkDigger is a Linux-friendly CLI tool for monitoring sensitive exposures via s
 
 Clone github repository:
 
-'''bash
+```bash
 git clone https://github.com/heshamkhaled1/DorkDigger.git
 cd DorkDigger
-'''
+```
 
 Create and activate a virtual environment, then install dependencies:
 
-'''bash
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip setuptools wheel (optional)
 python -m pip install -r requirements.txt
-'''
+```
 
 Requirements: Python 3.8+ and the dependencies in requirements.txt.
 
@@ -27,9 +27,9 @@ Requirements: Python 3.8+ and the dependencies in requirements.txt.
 Once installed, use the console command:
 
 Get familiar with DorkDigger:
-'''bash
+```bash
 python3 DorkDigger.py --help
-'''
+```
 
 Example quick run with DuckDuckGo and built‑in dorks:
 
@@ -48,15 +48,15 @@ DorkDigger supports SerpAPI for Google or Bing engines. Provide the key one time
 
 First run (saves the key for future runs):
 
-'''bash
+```bash
 python3 DorkDigger.py --serpapi-key <your-key>
-'''
+```
 
 Subsequent runs (no key flag required):
 
-'''bash
+```bash
 DorkDigger --engine serpapi --intext "password" --filetype sql --max-results 10 --sleep 1.5 --out-prefix test_alerts
-'''
+```
 
 Key resolution priority:
 
@@ -90,15 +90,15 @@ Examples:
 
 - DuckDuckGo with a custom dorks file:
 
-'''bash
+```bash
 DorkDigger --dorks-file mydorks.txt --max-results 50 --sleep 1.2 --out-prefix dd_out
-'''
+```
 
 - SerpAPI Google engine with scoping and filters:
 
-'''bash
+```bash
 DorkDigger --engine serpapi --site example.com --inurl ".bak" --filetype "sql" --max-results 20 --sleep 1 --out-prefix ex_alerts
-'''
+```
 
 ## Files and configuration
 
@@ -130,17 +130,6 @@ SERPAPI_KEY=YOUR_ACTUAL_KEY
 - Use --sleep to avoid throttling and to be polite to endpoints.
 - The tool attempts a lightweight content fetch to identify sensitive keywords; increase coverage by adding custom terms to sensitive_config.py.
 - Use --site and --inurl to constrain scope and reduce noise.
-
-
-## Development
-
-- Install dev dependencies using the project’s requirements.txt.
-- For local runs without installing the package, invoke the script directly:
-
-python3 DorkDigger.py --max-results 10
-- For editable installs during development:
-
-pip install -e .
 
 
 ## License and credits
