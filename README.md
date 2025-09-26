@@ -142,6 +142,10 @@ SERPAPI_KEY=YOUR_ACTUAL_KEY
 - The tool attempts a lightweight content fetch to identify sensitive keywords; increase coverage by adding custom terms to sensitive_config.py.
 - Use --site and --inurl to constrain scope and reduce noise.
 
+## Disclaimer
+This tool is built for **educational and ethical hacking purposes only**.  
+Do not use it against systems without explicit authorization.  
+The author is **not responsible** for any misuse.
 
 ## License and credits
 - [SerpAPI](https://serpapi.com/) for search automation  
@@ -152,3 +156,6 @@ SERPAPI_KEY=YOUR_ACTUAL_KEY
 - Author: Hesham Khaled
 - GitHub: HeshamKhaled1
 - LinkedIn: linkedin.com/in/deebo000
+
+## Version
+Current version is 1.0
