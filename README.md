@@ -2,6 +2,12 @@
 
 DorkDigger is a Linux-friendly CLI tool for monitoring sensitive exposures via search dorks using DuckDuckGo or SerpAPI. It supports custom dorks, site scoping, simple result filtering, lightweight content checks for sensitive keywords, and saves alerts to TXT/JSON/CSV.
 
+## Features
+- Automated Google Dorking via SerpAPI  
+- Passive reconnaissance without direct target interaction  
+- Clean CLI interface with colors and banners  
+- Lightweight and easy to run in a virtual environment  
+
 ## Quick install
 
 Clone github repository:
@@ -138,7 +144,11 @@ SERPAPI_KEY=YOUR_ACTUAL_KEY
 
 
 ## License and credits
-
-Author: Hesham Khaled
-GitHub: HeshamKhaled1
-LinkedIn: linkedin.com/in/deebo000
+- [SerpAPI](https://serpapi.com/) for search automation  
+- [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) for parsing
+- CLI with colorful output ([termcolor](https://github.com/ikalnytskyi/termcolor), [pyfiglet](https://github.com/pwaller/pyfiglet))
+- Inspiration from OSINT & Reconnaissance methodologies  
+- Inspired from [Sublist3r](https://github.com/aboul3la/Sublist3r)
+- Author: Hesham Khaled
+- GitHub: HeshamKhaled1
+- LinkedIn: linkedin.com/in/deebo000
